@@ -8,5 +8,8 @@ http://mrpej.com
 http://wpa8y.com
 http://mrpoid.com
 
+依赖项目：
+libMrpoid common
+
 第三方依赖项目：
 JakeWharton/ActionBarSherlock https://github.com/JakeWharton/ActionBarSherlock
