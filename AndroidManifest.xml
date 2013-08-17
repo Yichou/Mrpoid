@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mrpoid.mrpliset"
+    android:versionCode="1826"
+    android:versionName="1.8.0726" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- 联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 创建和删除文件 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 写文件 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_APN_SETTINGS" />
+    <!-- 接收短信权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- 发送短信权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!-- 统计 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- 创建桌面快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.mrpoid.mrplist.WelcomeActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mrpoid.mrplist.MrplistActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Sherlock" >
+        </activity>
+        <activity
+            android:name="com.mrpoid.app.EmuPreferenceActivity"
+            android:label="@string/settings" >
+        </activity>
+
+        <!-- mrpoid 所需要的组件 -->
+        <activity
+            android:name="com.mrpoid.app.EmulatorActivity"
+            android:configChanges="orientation|keyboard" >
+        </activity>
+        <activity
+            android:name="com.mrpoid.app.ExternActivity"
+            android:configChanges="orientation|keyboard"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/mrp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mrpoid.app.EditActivity"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.mrpoid.app.HelpActivity"
+            android:label="@string/help" >
+        </activity>
+        <activity
+            android:name="com.mrpoid.app.KeypadActivity"
+            android:label="@string/help" >
+        </activity>
+        <!-- mrpoid 所需要的组件 -->
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="50717aa3527015618e000004" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="mrpej" />
+    </application>
+
+</manifest>

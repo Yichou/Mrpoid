@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mrpoid</string>
+    <string name="share">分享</string>
+    <string name="image">图片</string>
+    <string name="share_msg">Mrpoid 是一款安卓系统上专业的mrp模拟器，可以完美运行大部分mrp，支持分辨率设置，支持屏幕拉伸，支持虚拟键盘，支持虚拟键盘自定义，如果你了解MRP，如果你还迷恋MRP平台，即可安装 Mrpoid 带你找回当初沉侵在MRP手游的时代！</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="cpoy_right">CopyRight © 2013/-2015 天使之翼</string>
+    
+</resources>

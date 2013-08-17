@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <item type="id" name="mg_skin_color"/>
+    <item type="id" name="mg_skin_bg"/>
+    <item type="id" name="mg_option"/>
+    <item type="id" name="mi_share"/>
+</resources>

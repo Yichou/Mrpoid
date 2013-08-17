@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/VersionText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:text="ver 0.0.0, Teleca Poland"
+        android:textSize="11dip" >
+    </TextView>
+
+    <com.android.player.FixedViewFlipper
+        android:id="@+id/CompanyViewFlipper"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:inAnimation="@anim/fade_in"
+        android:outAnimation="@anim/fade_out"
+        android:paddingLeft="10dip" >
+
+        <!-- Jamendo Part -->
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dip"
+                    android:src="@drawable/logo" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/terms_of_use"
+                    android:textSize="14dip" />
+
+                <Button
+                    android:id="@+id/TermsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/terms_button" >
+                </Button>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:text="@string/terms"
+                    android:textSize="14dip" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/about_contact"
+                    android:textSize="25dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/LinkText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:text="@string/about_link"
+                    android:textSize="18dip" >
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:text="@string/about_address"
+                    android:textSize="14dip" >
+                </TextView>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Teleca Part -->
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dip"
+                    android:src="@drawable/logo" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/maintainers"
+                    android:textSize="14dip" >
+                </TextView>
+            </LinearLayout>
+        </ScrollView>
+    </com.android.player.FixedViewFlipper>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/android:bottom_bar"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="3dip" >
+
+        <Button
+            android:id="@+id/AboutCompanyButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="0.5"
+            android:text="@string/about_teleca" >
+        </Button>
+
+        <Button
+            android:id="@+id/CancelButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_weight="0.5"
+            android:text="@string/ok" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
