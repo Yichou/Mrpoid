@@ -55,7 +55,7 @@ public class ShortcutUtils {
 		return false;
 	}
 	
-	public boolean isAddShortCut(Context context, String title) {
+	public boolean shortCutExist(Context context, String title) {
         boolean isInstallShortcut = false;
         final ContentResolver cr = context.getContentResolver();
 

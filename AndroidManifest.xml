@@ -102,7 +102,7 @@
         <activity
             android:name="com.mrpoid.keysprite.KeySpriteEditorActivity"
             android:label="@string/settings"
-            android:theme="@style/emu_theme_light" >
+            android:theme="@style/emu_theme_black" >
         </activity>
         <activity
             android:name="com.mrpoid.app.ExternActivity"

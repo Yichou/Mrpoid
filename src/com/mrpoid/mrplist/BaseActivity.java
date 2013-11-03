@@ -7,6 +7,7 @@ import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.mrpoid.core.Emulator;
 import com.mrpoid.core.Prefer;
+import com.mrpoid.core.Res;
 import com.yichou.sdk.CheckUpdateCallback;
 import com.yichou.sdk.DownloadCallback;
 import com.yichou.sdk.SdkUtils;
@@ -24,6 +25,9 @@ public class BaseActivity extends SherlockFragmentActivity {
 		super.onCreate(arg0);
 		
 		SdkUtils.setRealImpl(new SdkImpl(this));
+
+		// 加载资源
+		Res.load(this);
 		
 		//错误报告
 		SdkUtils.enableCrashHandle(this, true);
@@ -58,8 +62,6 @@ public class BaseActivity extends SherlockFragmentActivity {
 					Toast.makeText(getActivity(), "更新包下载失败，错误码" + ret , Toast.LENGTH_SHORT).show();
 			}
 		});
-		
-//		Emulator.getInstance().setThreadMod(Emulator.THREAD_NATIVE);
 	}
 	
 	private Activity getActivity(){
@@ -84,6 +86,7 @@ public class BaseActivity extends SherlockFragmentActivity {
 	protected void onDestroy() {
 		Prefer.getInstance().otherSave();
 
+		Res.unLoad();
 		Emulator.releaseInstance();
 
 		super.onDestroy();
