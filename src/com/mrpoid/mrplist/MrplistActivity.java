@@ -16,6 +16,7 @@ import android.content.SharedPreferences.Editor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -652,6 +653,11 @@ public class MrplistActivity extends BaseActivity implements ActionBar.OnNavigat
 				}
 			});
 			listView.setCacheColorHint(Color.TRANSPARENT);
+			listView.setDivider(new ColorDrawable(Color.TRANSPARENT));
+			listView.setDividerHeight(1);
+			
+//			LayoutParams p = listView.getLayoutParams();
+//			p.
 		}
 
 		@Override
