@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mrpoid.mrpliset"
-    android:versionCode="1826"
-    android:versionName="1.8.0726" >
+    android:versionCode="1900"
+    android:versionName="1.9.1212" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="10"
         android:targetSdkVersion="17" />
 
     <supports-screens
@@ -48,14 +48,15 @@
     <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
 
     <application
-        android:name="com.mrpoid.app.EmuApplication"
+        android:name="com.mrpoid.mrplist.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.mrpoid.mrplist.WelcomeActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            android:name="com.mrpoid.mrplist.ui.WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -63,16 +64,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mrpoid.mrplist.MrplistActivity"
+            android:name="com.mrpoid.mrplist.ui.MrplistActivity"
             android:configChanges="keyboardHidden|orientation"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Sherlock" >
+            android:label="@string/app_name" >
         </activity>
 
         <!-- mrpoid 所需要的组件 -->
         <service
             android:name="com.mrpoid.app.EmuService"
             android:exported="false" />
+
+        <receiver
+            android:name="com.mrpoid.app.EmuReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
 
         <activity
             android:name="com.mrpoid.app.EmulatorActivity"
@@ -86,12 +95,10 @@
         </activity>
         <activity
             android:name="com.mrpoid.app.HelpActivity"
-            android:label="@string/help"
             android:theme="@style/emu_theme_light" >
         </activity>
         <activity
             android:name="com.mrpoid.app.KeypadActivity"
-            android:label="@string/help"
             android:theme="@style/emu_theme_black_notitle" >
         </activity>
         <activity
@@ -102,14 +109,12 @@
         <activity
             android:name="com.mrpoid.keysprite.KeySpriteEditorActivity"
             android:label="@string/settings"
-            android:theme="@style/emu_theme_black" >
+            android:theme="@style/emu_theme_light" >
         </activity>
         <activity
             android:name="com.mrpoid.app.ExternActivity"
             android:configChanges="orientation|keyboard"
-            android:exported="true"
-            android:launchMode="standard"
-            android:multiprocess="true" >
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />

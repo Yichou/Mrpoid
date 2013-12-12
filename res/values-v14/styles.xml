@@ -8,5 +8,7 @@
     <style name="AppBaseTheme" parent="android:Theme.Holo">
         <!-- API 14 theme customizations can go here. -->
     </style>
+    
+    <style name="Fullscreen" parent="android:Theme.Holo.NoActionBar.Fullscreen" />
 
 </resources>
